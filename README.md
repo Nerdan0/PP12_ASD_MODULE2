@@ -9,3 +9,4 @@
 ![aye](https://cdn.discordapp.com/attachments/663443245493256196/712394803769245757/1428.jpg)
 
 ![хрю](https://cs8.pikabu.ru/post_img/big/2017/12/16/5/151340587815621584.jpg)
+это валера он не кусаеца
