@@ -1,0 +1,86 @@
+import java.util.Scanner;
+import java.util.Stack;
+//2 вар Петруненко пп-12
+public class mod2ASDpetrunenkoPP12 {
+
+    public static void main(String[] args){
+
+        try{
+            Scanner in = new Scanner(System.in);
+            int n1, n2, n3;
+            int s1=0, s2=0, s3=0;
+            System.out.println("Введіть N1 N2 N3.");
+            n1=in.nextInt();
+            n2=in.nextInt();
+            n3=in.nextInt();
+            Stack a1 = new Stack<Integer>();
+            Stack a2 = new Stack<Integer>();
+            Stack a3 = new Stack<Integer>();
+            System.out.println("Введіть стечики.");
+            System.out.print("N1: ");
+            for(int i=0; i < n1; i++){
+                int temp = in.nextInt();
+                a1.push(temp);
+                s1+=temp;
+            }
+            System.out.print("N2: ");
+            for(int i=0; i < n2; i++){
+                int temp = in.nextInt();
+                a2.push(temp);
+                s2+=temp;
+            }
+            System.out.print("N3: ");
+            for(int i=0; i < n3; i++){
+                int temp = in.nextInt();
+                a3.push(temp);
+                s3+=temp;
+            }
+            int minsize=9999999;
+            while(true) {
+                if (minsize > s1) minsize = s1;
+                if (minsize > s2) minsize = s2;
+                if (minsize > s3) minsize = s3;
+
+                while (s1 > minsize) {
+                    int temp = (int) a1.pop();
+                    s1 = s1 - temp;
+                    if (s1 < minsize) {
+                        minsize = s1;
+                    }
+
+                }
+                while (s2 > minsize) {
+                    int temp = (int) a2.pop();
+                    s2 = s2 - temp;
+                    if (s2 < minsize) {
+                        minsize = s2;
+                    }
+
+                }
+                while (s3 > minsize) {
+                    int temp = (int) a3.pop();
+                    s3 = s3 - temp;
+                    if (s3 < minsize) {
+                        minsize = s3;
+                    }
+
+                }
+                if(s1==s2&&s2==s3&&minsize!=0){
+                    System.out.println("Перемога! Max(макс) розмір = " + minsize);
+                return;
+                }
+                if(minsize<=0){
+                    System.out.println("не вийшло!(((");
+                    return;
+                }
+            }
+        }
+        catch(Exception e){
+            System.out.println("попытка - не пытка");
+            main(new String[]{"опять"});
+            return;
+        }
+
+
+    }
+}
