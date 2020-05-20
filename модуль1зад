@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import java.util.Stack;
 //2 вар Петруненко пп-12
+//копирайт, не смейте тырить пп-11, я вас знаю, прохвосты. ПП-12 можно, за пачку сигарет сделаю ваш вариант.
 public class mod2ASDpetrunenkoPP12 {
 
     public static void main(String[] args){
