@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.Scanner;
 //вар 2 Петруненко ПП-12
-//копирайт, не смейте тырить пп-11, я вас знаю, прохвосты
+//копирайт, не смейте тырить пп-11, я вас знаю, прохвосты. ПП-12 можно, за пачку сигарет сделаю ваш вариант.
 public class mod2ASD2petrunenkoPP12 {
      public static void main(String args[]){
 
