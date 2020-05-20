@@ -8,4 +8,4 @@
 
 ![aye](https://cdn.discordapp.com/attachments/663443245493256196/712394803769245757/1428.jpg)
 
-![хрю](https://www.google.com/url?sa=i&url=https%3A%2F%2Fpikabu.ru%2Fstory%2Fchto_delat_esli_vas_presleduet_gus_5562257&psig=AOvVaw2S0lXsHUj96OwCoPL3ygeV&ust=1590058038160000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIiJzfmhwukCFQAAAAAdAAAAABAD)
+![хрю](https://cs8.pikabu.ru/post_img/big/2017/12/16/5/151340587815621584.jpg)
