@@ -1,5 +1,6 @@
-//1 variant
-//1 task
+//ПП-12
+//Гаврилян
+//1 вариант (3)
 package com.company;
 import java.util.ArrayList;
 import java.util.Scanner;
