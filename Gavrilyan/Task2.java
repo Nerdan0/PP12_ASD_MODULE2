@@ -1,6 +1,7 @@
+//ПП-12
+//Гаврилян
+//1 вариант (3)
 package com.company;
-//1 variant
-//2 task
 import java.util.Scanner;
 
 class Task2 {
