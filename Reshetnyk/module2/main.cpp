@@ -38,12 +38,21 @@ public:
         }
     }
 
+    int countSum(){
+        NodeStack<T>* p = pTop;
+        int total=0;
+        while(p){
+            total+=p->item;
+            p = p->next;
+        }
+        return total;
+    }
+
 };
 
 
 int main() {
     int size,size2,size3, item;
-    int total1=0,total2=0,total3=0;
     StackList<int> SL,SL2,SL3;
     cout<<"Enter N1 N2 N3"<<endl;
     cin>>size>>size2>>size3;
@@ -51,29 +60,29 @@ int main() {
     for(int i =0; i<size;i++){
         cin>>item;
         SL.push(item);
-        total1+=item;
     }
     cout<<"Enter elements of N2"<<endl;
     for(int i =0; i<size2;i++){
         cin>>item;
         SL2.push(item);
-        total2+=item;
     }
     cout<<"Enter elements of N3"<<endl;
     for(int i =0; i<size3;i++){
         cin>>item;
         SL3.push(item);
-        total3+=item;
     }
-    while(!((total1==total2)&&(total2==total3)&&(total1==total3))){
-        if(total1>=total2 && total1>=total3){
-            total1 -=SL2.pop();
-        }else if(total2 >=total1 && total2>=total3){
-            total2 -=SL2.pop();
+    int sum1=SL.countSum();
+    int sum2= SL2.countSum();
+    int sum3= SL3.countSum();
+    while(!((sum1 == sum2) && (sum2 == sum3) && (sum1 == sum3))){
+        if(sum1 >= sum2 && sum1 >= sum3){
+            sum1 -=SL.pop();
+        }else if(sum2 >= sum1 && sum2 >= sum3){
+            sum2 -=SL2.pop();
         }else{
-            total3 -=SL3.pop();
+            sum3 -=SL3.pop();
         }
     }
-    cout<<endl<<"max :"<<total1;
+    cout<<endl<<"max :"<<sum1;
     return 0;
 }
