@@ -1,0 +1,50 @@
+//Компанец,1 вариант
+
+import java.util.Scanner;
+import java.util.Stack;
+
+public class Module_ASD {
+    public static void main(String[] args) {
+        Stack Stack = new Stack();
+        Stack Maxstack = new Stack();
+        try {
+            int maxelem = -1;
+            int ab;
+            int operations;
+            Scanner a = new Scanner(System.in);
+            System.out.println("Enter N");
+            int N = a.nextInt();
+            for (operations = 0; operations < N; operations++) {
+                System.out.println("\n1 - Add Element\n2 - Delete Element\n3 - Max value\n4 - Exit ");
+                int var = a.nextInt();
+                switch (var) { case 1:
+                        Scanner number = new Scanner(System.in);
+                        System.out.println("Enter number of new Element");
+                        int n1 = number.nextInt();
+                        Stack.push(n1);
+                        if (n1> maxelem){
+                            maxelem = n1;
+                            Maxstack.push(n1);
+                        }
+                        continue;
+                    case 2:
+                        Stack.pop();
+                        continue;
+                    case 3:
+
+                        System.out.println(Maxstack);
+                        break;
+                    case 4:
+                        System.exit(0);
+                }
+            }
+            System.out.println(Stack);
+
+
+        }
+        catch (Exception e)
+        {
+            System.out.println("Invalid");
+        }
+    }
+}
