@@ -1,0 +1,42 @@
+import java.util.LinkedList;
+import java.util.Scanner;
+//вар 2 Петруненко ПП-12
+//копирайт, не смейте тырить пп-11, я вас знаю, прохвосты
+public class mod2ASD2petrunenkoPP12 {
+     public static void main(String args[]){
+
+         try{
+             Scanner in = new Scanner(System.in);
+             int n, add;
+             System.out.println("Введіть N, Add.");
+             n=in.nextInt();
+             add=in.nextInt();
+
+             LinkedList a1 = new LinkedList<Integer>();
+             System.out.println("Введіть значення");
+
+             for(int i=0; i < n; i++){
+                 System.out.print("N"+(i+1)+" : ");
+                 a1.add(in.nextInt());
+             }
+                for(int i=0;i<n;i++){
+
+                    System.out.println(a1.get(i));
+                }
+             System.out.println("Введіть додаткові єлементи");
+             for(int i=0; i < add; i++) {
+                 System.out.print("A"+(i+1)+" : ");
+                 a1.add(in.nextInt());
+             }
+             a1.sort(null);
+             for(int i=0;i<n+add;i++){
+                 System.out.println(a1.get(i));
+             }
+         }
+         catch(Exception e){
+             System.out.println("попытка - не пытка");
+             main(new String[]{"опять"});
+             return;
+         }
+     }
+}
