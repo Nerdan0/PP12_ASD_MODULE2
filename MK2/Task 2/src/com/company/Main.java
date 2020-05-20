@@ -1,3 +1,7 @@
+//Пелішенко ПП-12 Варіант 6 Завдання 2
+//Не повністю закінчена
+//Може сказати коли стеки одразу мають однакову вагу
+//Може урівняти стеки якщо при відніманні елемента вага стеку не стає менше ваги іншого стеку
 package com.company;
 
 import java.util.Stack;
@@ -53,29 +57,52 @@ public class Main {
             System.out.println("");
         }
 
+        System.out.println("Вага стеків:" + stack1Weight + " " + stack2Weight + " " + stack3Weight);
+
         if (stack1Weight == stack2Weight && stack1Weight == stack3Weight) {
             System.out.println("Загальна вага стеків однакова, елементи не потрібно видаляти");
-        } else if (stack1Weight < stack2Weight && stack1Weight < stack3Weight) {
-            do {
-                stack2.pop();
-            } while (stack1Weight != stack2Weight);
-            do {
-                stack3.pop();
-            } while (stack1Weight != stack3Weight);
-        } else if (stack2Weight < stack1Weight && stack2Weight < stack3Weight) {
-            do {
-                stack1.pop();
-            } while (stack2Weight != stack1Weight);
-            do {
-                stack3.pop();
-            } while (stack2Weight != stack3Weight);
-        } else if (stack3Weight < stack2Weight && stack3Weight < stack1Weight) {
-            do {
-                stack2.pop();
-            } while (stack3Weight != stack2Weight);
-            do {
-                stack1.pop();
-            } while (stack3Weight != stack1Weight);
+        } else if (stack1Weight <= stack2Weight && stack1Weight <= stack3Weight) {
+            while (stack1Weight != stack2Weight) {
+                stack2Weight -= stack2.pop();
+            }
+
+            while (stack1Weight != stack3Weight) {
+                stack3Weight -= stack3.pop();
+            }
+        } else if (stack2Weight <= stack1Weight && stack2Weight <= stack3Weight) {
+            while (stack2Weight != stack1Weight) {
+                stack1Weight -= stack1.pop();
+            }
+            while (stack2Weight != stack3Weight) {
+                stack3Weight -= stack3.pop();
+            }
+        } else if (stack3Weight <= stack2Weight && stack3Weight <= stack1Weight) {
+            while (stack3Weight != stack2Weight) {
+                stack2Weight -= stack2.pop();
+            }
+            while (stack3Weight != stack1Weight) {
+                stack1Weight -= stack1.pop();
+            }
+        }
+
+        System.out.println("Тепер загальна вага кожного стеку " + stack1Weight);
+
+        System.out.println("Фінальний стек 1:");
+        for (int i = 0; i < n1; i++) {
+            System.out.print(stack1.pop());
+            System.out.print(" ");
+        }
+
+        System.out.println("Фінальний стек 2:");
+        for (int i = 0; i < n2; i++) {
+            System.out.print(stack1.pop());
+            System.out.print(" ");
+        }
+
+        System.out.println("Фінальний стек 3:");
+        for (int i = 0; i < n3; i++) {
+            System.out.print(stack1.pop());
+            System.out.print(" ");
         }
     }
 }

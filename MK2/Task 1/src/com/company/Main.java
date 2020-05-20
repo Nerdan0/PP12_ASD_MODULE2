@@ -1,3 +1,4 @@
+//Пелішенко ПП-12 Варіант 6 Завдання 2
 package com.company;
 
 import java.util.ArrayList;
@@ -49,7 +50,8 @@ public class Main {
                             maxNumber = number;
                         }
                     }
-                    maxNumbers.add(maxNumber);
+                    maxNumbers.add(case1 - 1, maxNumber);
+                    maxNumber = 0;
                     break;
                 case 2:
                     System.out.println("Вилучення числа " + stack.pop().toString());
