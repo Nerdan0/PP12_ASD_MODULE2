@@ -68,7 +68,7 @@ public class Task1 {
 
             while (valueFirst > valueMin) {
                 int temp = stackFirst.pop();
-                valueFirst = valueFirst - temp;
+                valueFirst -= temp;
                 if (valueFirst < valueMin) {
                     valueMin = valueFirst;
                 }
@@ -76,7 +76,7 @@ public class Task1 {
             }
             while (valueSecond > valueMin) {
                 int temp = stackSecond.pop();
-                valueSecond = valueSecond - temp;
+                valueSecond -= temp;
                 if (valueSecond < valueMin) {
                     valueMin = valueSecond;
                 }
@@ -84,7 +84,7 @@ public class Task1 {
             }
             while (valueThird > valueMin) {
                 int temp = stackThird.pop();
-                valueThird = valueThird - temp;
+                valueThird -= temp;
                 if (valueThird < valueMin) {
                     valueMin = valueThird;
                 }
